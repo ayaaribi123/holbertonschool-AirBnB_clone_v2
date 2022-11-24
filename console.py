@@ -128,8 +128,8 @@ class HBNBCommand(cmd.Cmd):
             new_instance.save()
             print(new_instance.id)
             storage.save()
-        except Exception:
-            pass
+        except IndexError:
+            continue
 
     def help_create(self):
         """ Help information for the create method """
