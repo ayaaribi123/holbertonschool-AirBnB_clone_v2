@@ -125,10 +125,11 @@ class HBNBCommand(cmd.Cmd):
             return
         new_instance = HBNBCommand.classes[args]()
         for key, value in kwargs.iteritems():
+            if key not in args.__dict__
             new_instance.key = value
         storage.save()
         print(new_instance.id)
-        storage.save()
+        new_instance.save()
 
     def help_create(self):
         """ Help information for the create method """
