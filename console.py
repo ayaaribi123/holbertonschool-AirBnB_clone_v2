@@ -126,7 +126,7 @@ class HBNBCommand(cmd.Cmd):
         new_instance = HBNBCommand.classes[args]()
         for key, value in kwargs.iteritems():
             new_instance.key = value
-        new_instance.save()
+        storage.save()
         print(new_instance.id)
         storage.save()
 
