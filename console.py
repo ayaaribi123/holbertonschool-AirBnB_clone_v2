@@ -119,7 +119,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         if not kwargs:
-            continue
+            pass
         elif args not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
@@ -129,7 +129,7 @@ class HBNBCommand(cmd.Cmd):
             new_instance.key = value
         storage.save()
         print(new_instance.id)
-        new_instance.save()
+        storage.save()
 
     def help_create(self):
         """ Help information for the create method """
