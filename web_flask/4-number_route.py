@@ -30,7 +30,7 @@ def python(text="is cool"):
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
-    return "%d is a numbe" + n
+    return "n %d is a numbe"
 
 
 if __name__ == '__main__':
